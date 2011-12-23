@@ -17,11 +17,11 @@ test_that("export parameter overrides default", {
                          expected='export(b)')  
 })
 
-test_that("export detects S4 class", {
-  expect_namespace("#' @export
-                          setClass('a')",
-                         expected='exportClasses(a)')  
-})
+#test_that("export detects S4 class", {
+#  expect_namespace("#' @export
+#                          setClass('a')",
+#                         expected='exportClasses(a)')  
+#})
 
 
 test_that("exportClass overrides default class name", {
@@ -30,11 +30,11 @@ test_that("exportClass overrides default class name", {
                          expected='exportClasses(b)')  
 })
 
-test_that("export detects method name", {
-  expect_namespace("#' @export
-                          setMethod('b', 'a')",
-                         expected='exportMethods(b)')  
-})
+#test_that("export detects method name", {
+#  expect_namespace("#' @export
+#                          setMethod('b', 'a')",
+#                         expected='exportMethods(b)')  
+#})
 
 test_that("exportMethod overrides default method name", {
   expect_namespace("#' @exportMethod c
