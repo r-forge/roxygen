@@ -1,8 +1,9 @@
 
 .onAttach <- function(libname, pkgname) {
-  packageStartupMessage(paste("This is roxygen 0.3-2:\n",
-                              " Please note that roxygen is no longer being\n",
-                              " actively developed. Please see its successor\n",
-                              " roxygen2 on CRAN!\n"))
+  packageStartupMessage(paste("\n", paste(rep("*", 47), collapse = ""), "\n",
+                              " Note that roxygen is no longer being actively\n",
+                              " developed. Please use its successor roxygen2!\n",
+                              paste(rep("*", 47), collapse = ""), "\n"))
   return(TRUE)
 }
+	
