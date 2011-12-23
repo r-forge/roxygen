@@ -2,8 +2,7 @@
 \alias{parse.ref.srcref}
 \title{Parse a srcref...}
 \usage{
-### parse.ref.srcref(ref, ...)
-parse.ref.srcref(...)
+\method{parse.ref}{srcref} (ref, ...)
 }
 \description{Parse a srcref}
 \value{List containing the parsed srcref}

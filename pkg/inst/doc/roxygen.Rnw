@@ -50,7 +50,7 @@ replaces the package description so that `\texttt{R CMD check}' will
 run after \Roxygen{} has processed the package skeleton.
 
 First, create the package skeleton:
-<<keep.source=true>>=
+<<keep.source=true,eval=FALSE>>=
 library(roxygen)
 package.skeleton('helloRoxygen',
                  code_files='hello-roxygen.R',
