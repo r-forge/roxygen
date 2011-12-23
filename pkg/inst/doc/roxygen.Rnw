@@ -56,17 +56,16 @@ package.skeleton('helloRoxygen',
                  code_files='hello-roxygen.R',
                  force=TRUE)
 @ 
-<<echo=false, results=hide>>=
+then, run \Roxygen{} on the new directory:
+<<eval=FALSE>>=
 roxygenize('helloRoxygen',
            roxygen.dir='helloRoxygen',
            copy.package=FALSE,
            unlink.target=FALSE)
 @
-then, run \Roxygen{} on the new directory:
-
-\begin{quote}
-  \texttt{R CMD roxygen -d helloRoxygen}.
-\end{quote}
+%%\begin{quote}
+%%  \texttt{R CMD roxygen -d helloRoxygen}.
+%%\end{quote}
 
 A new \texttt{helloRoxygen/man/helloRoxygen-package.Rd} should have
 been created with the contents of figure \ref{hello-roxygen}; and
@@ -119,7 +118,7 @@ details. \citep[\S2.3 ``Marking text'']{r-core}
         {Roxygen example \texttt{fermat.R}}
         {fermat}
 
-<<echo=false, results=hide>>=
+<<echo=false, results=hide, eval=FALSE>>=
 roxygenize('pseudoprime',
            roxygen.dir='pseudoprime',
            copy.package=FALSE,
@@ -169,7 +168,7 @@ Running \texttt{`R CMD roxygen -d pseudoprime'} populates \texttt{man}
 with Rd files, edits \texttt{DESCRIPTION} and \texttt{NAMESPACE}, and
 puts call graphs in \texttt{inst/doc}:
 
-<<echo=false>>=
+<<echo=false,eval=FALSE>>=
 roxygenize('pseudoprime',
            roxygen.dir='pseudoprime',
            copy.package=FALSE,
@@ -178,7 +177,8 @@ roxygenize('pseudoprime',
 @
 
 The \texttt{roxygenize} function is an alternative to \texttt{`R CMD
-  roxygen'}; see the help page for details.
+  roxygen'}; see the help page for details. Note that version 0.1-3 \texttt{`R CMD
+  roxygen'} is not available anymore.
 
 
 \bibliographystyle{plainnat}
